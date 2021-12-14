@@ -1,0 +1,24 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    url: jdbc:mysql://114.116.51.27:33306/software?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: xNXhjl68PeU55aHOaMd3WzLFuhs3csU
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host: 114.116.51.27
+    port: 63379
+    password: Cfru0NJ3bevz3r0BQhXj40Ifel0J00i
+
+mybatis-plus:
+  global-config:
+    db-config:
+      # 启用主键自增
+      id-type: auto
+
+register:
+  ip: 101.34.241.81
+  port: 8000

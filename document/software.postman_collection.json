@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "00e57073-2208-4966-a017-28dc3a640639",
+		"name": "software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/server",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"channelId\": \"26453742\",\n    \"orderType\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/server",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"server"
+					]
+				},
+				"description": "创建服务器"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/server/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m_ChannelName\":\"\",\n    \"m_PortName\":\"COM1\",\n    \"m_BaudRate\":9600,\n    \"m_DataBits\":8,\n    \"m_Parity\":0,\n    \"m_StopBits\":1,\n    \"m_FlowControlIn\":1,\n    \"m_FlowControlOut\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/server/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"server",
+						"list"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "qiukai",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "qiukai123",
+							"disabled": true
+						}
+					]
+				},
+				"description": "获取服务区列表"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/client/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/client/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"list"
+					]
+				},
+				"description": "获取用户列表"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9000/client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "host",
+							"value": "127.0.0.1",
+							"type": "text"
+						},
+						{
+							"key": "port",
+							"value": "7359",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9000/client",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"client"
+					],
+					"query": [
+						{
+							"key": "host",
+							"value": "127.0.0.1",
+							"disabled": true
+						},
+						{
+							"key": "port",
+							"value": "7365",
+							"disabled": true
+						}
+					]
+				},
+				"description": "与服务器连接"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"channelId\": \"dc71594a\",\n    \"order\": {\n        \"name\": \"delete\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"order"
+					]
+				},
+				"description": "发送命令"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/client/list/7359",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/client/list/7359",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"list",
+						"7359"
+					]
+				},
+				"description": "获取指定服务器的列表 7359为端口号"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/server/7359",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/server/7359",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"server",
+						"7359"
+					]
+				},
+				"description": "关闭服务器"
+			},
+			"response": []
+		}
+	]
+}
